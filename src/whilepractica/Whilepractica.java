@@ -16,31 +16,7 @@ public class Whilepractica {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // TODO code application logic here
-        System.out.println("hola mundo");
-        System.out.println("practica con github y ciclo hile");
-        int opcion;
-        do {
-            System.out.println("1.suma");
-            System.out.println("2.resta");
-            System.out.println("ingrese una opcion");
-            
-            opcion = sc.nextInt();
-            
-            switch (opcion){
-                case 1:
-                    System.out.println("funcion suma");
-                    break;
-                case 2:
-                    System.out.println("funcion resta");
-                    break;
-                default:
-                    System.out.println("opcion incorrecta");
-                    
-            }       
-            
-        } while (opcion <=3);
+        cajero_automatico();
     }
     
     public static void cajero_automatico(){
@@ -55,7 +31,10 @@ public class Whilepractica {
         System.out.println("tarjeta detectada");
         System.out.println("ingresa tu clave");
         int clave_ingresada = sc.nextInt();
+        int opcion;
+        int intentos2 = 3;
         if (clave_ingresada == clave) {
+            do {
             //si la clave coincide
             System.out.println("bienvenido al cajero");
             System.out.println("selecciona una opción: ");
@@ -63,15 +42,44 @@ public class Whilepractica {
             System.out.println("2. retirar dinero");
             System.out.println("3. depositar dinero");
             System.out.println("4. salir");
+            System.out.println("ingrese la opcion deseada: ");
+            
+            opcion = sc.nextInt();
+            
+            switch  (opcion) {
+                case 1://opcion consultar
+                    System.out.println("consultar saldo: ");
+                    consultar_saldo();
+                case 2://opcion retirar
+                    System.out.println("retirar saldo: ");
+                case 3://opcion depositar
+                    System.out.println("depositar dinero");
+                case 4://opcion salir
+                    System.out.println("Gracias por preferirnos");
+                    break;
+                default:
+                    System.out.println("opcion incorrecta");
+                    intentos2 --;
+            }
+                
+            } while (opcion != 4 && intentos >0);
+            
+            break;
+            
         }else{
             System.out.println("clave incorrecta ");
-            intentos = -1;
+            intentos --;
             System.out.println("te quedan "+ intentos);
         }
     }
         if (intentos == 0){
             System.out.println("tarjeta bloqueada, haz superado los 3 intentos");
         }
+    }
+    
+    public static void consultar_saldo(){
+        double saldo = 500;
+        System.out.println("el saldo disponible es de: "+saldo);
     }
     
 }
