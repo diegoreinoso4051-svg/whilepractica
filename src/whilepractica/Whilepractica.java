@@ -43,4 +43,27 @@ public class Whilepractica {
         } while (opcion <=3);
     }
     
+    public static void cajero_automatico(){
+        Scanner sc = new Scanner(System.in);
+        //algoritmo para simular cajero automatico
+        int clave = 1234;
+        System.out.println("cajero automatico");
+        System.out.println("-----------------");
+        System.out.println("ingrese su tarjeta: ");
+        System.out.println("tarjeta detectada");
+        System.out.println("ingresa tu clave");
+        int clave_ingresada = sc.nextInt();
+        if (clave_ingresada == clave) {
+            //si la clave coincide
+            System.out.println("bienvenido al cajero");
+            System.out.println("selecciona una opción: ");
+            System.out.println("1. consultar saldo");
+            System.out.println("2. retirar dinero");
+            System.out.println("3. depositar dinero");
+            System.out.println("4. salir");
+        }else{
+            
+        }
+    }
+    
 }
