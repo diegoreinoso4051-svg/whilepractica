@@ -50,10 +50,14 @@ public class Whilepractica {
                 case 1://opcion consultar
                     System.out.println("consultar saldo: ");
                     consultar_saldo();
+                    break;
                 case 2://opcion retirar
-                    System.out.println("retirar saldo: ");
+                    System.out.println("retirar dinero: ");
+                    break;
                 case 3://opcion depositar
                     System.out.println("depositar dinero");
+                    break;
+         
                 case 4://opcion salir
                     System.out.println("Gracias por preferirnos");
                     break;
