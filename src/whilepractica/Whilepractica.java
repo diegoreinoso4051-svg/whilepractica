@@ -16,6 +16,7 @@ public class Whilepractica {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("hola mundo");
+        System.out.println("practica con github y ciclo while");
     }
     
 }
