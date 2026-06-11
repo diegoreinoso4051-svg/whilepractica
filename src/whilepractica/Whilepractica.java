@@ -47,6 +47,8 @@ public class Whilepractica {
         Scanner sc = new Scanner(System.in);
         //algoritmo para simular cajero automatico
         int clave = 1234;
+        int intentos = 3;
+        while (intentos > 0 && intentos <=3){
         System.out.println("cajero automatico");
         System.out.println("-----------------");
         System.out.println("ingrese su tarjeta: ");
@@ -62,7 +64,13 @@ public class Whilepractica {
             System.out.println("3. depositar dinero");
             System.out.println("4. salir");
         }else{
-            
+            System.out.println("clave incorrecta ");
+            intentos = -1;
+            System.out.println("te quedan "+ intentos);
+        }
+    }
+        if (intentos == 0){
+            System.out.println("tarjeta bloqueada, haz superado los 3 intentos");
         }
     }
     
